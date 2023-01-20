@@ -15,8 +15,13 @@
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet">
 
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -37,10 +42,11 @@
 
   gtag('config', 'G-5X9B5PJJ3Y');
 </script>
-    
+
+
     <style>
       :root {
-        --main-clr: rgb(240, 240, 250);
+        --main-clr: rgb(34, 34, 46);
         --accent-clr: rgb(84, 7, 110);
       }
 
@@ -71,6 +77,14 @@
         /* background-color: aqua; */
       }
 
+      /* 
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Shadows Into Light', cursive; */
+      /* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Shadows Into Light', cursive; */
+
       .main--container {
         /* min-height: 80vh; */
         justify-content: center;
@@ -80,11 +94,12 @@
       }
 
       .bots--container {
+        display: none;
         padding: 1.5rem;
         position: relative;
         margin-top: 1.25rem;
         border-radius: 10px;
-        border: 5px solid white;
+        /* border: 5px solid white; */
         width: 95%;
         max-width: 1200px;
         -moz-column-gap: 10px;
@@ -93,6 +108,7 @@
         flex-wrap: wrap;
         row-gap: 10px;
         list-style: none;
+        isolation: isolate;
       }
 
       /* 
@@ -115,9 +131,10 @@
 } */
 
       .bot--card {
-        background-color: white;
+        /* background-color: white; */
+        /* background-image: linear-gradient(to right, #49c5f6, #ff2aef); */
 
-        box-shadow: 0px 0px 20px rgba(196, 194, 194, 0.366);
+        /* box-shadow: 0px 0px 20px rgba(196, 194, 194, 0.366); */
         flex-basis: 280px;
         min-height: 200px;
         border-radius: 10px;
@@ -130,15 +147,26 @@
         -o-border-radius: 10px;
 
         flex-direction: column;
+        text-decoration: none;
       }
 
       .card--division2 {
+        color: black;
         gap: 1rem;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
+        -webkit-border-radius: 0 0 10px 10px;
+        -moz-border-radius: 0 0 10px 10px;
+        -ms-border-radius: 0 0 10px 10px;
+        -o-border-radius: 0 0 10px 10px;
       }
 
       .card--division1 {
+        color: black;
         flex-grow: 1;
         position: relative;
+        font-size: 1.2rem;
+        /* background-color: white; */
       }
 
       .card--division1::after {
@@ -147,8 +175,11 @@
         top: 00%;
         width: 100%;
         height: 100%;
-        background-color: rgba(80, 78, 77, 0.375);
-        opacity: 0.2;
+        /* background-color: rgb(255, 255, 255); */
+        background-image: linear-gradient(to right,
+            var(--grad-clr-1),
+            var(--grad-clr-2));
+        opacity: 1;
         border-radius: 10px 10px 0 0;
         /*box-shadow: 10px 10px 100px red;
   */
@@ -157,6 +188,7 @@
         -ms-border-radius: 10px 10px 0 0;
         -o-border-radius: 10px 10px 0 0;
         -webkit-border-radius: 10px 10px 0 0;
+        z-index: -1;
       }
 
       .bot--icon {
@@ -203,13 +235,97 @@
       }
 
       .bot--name {
-        font-weight: bolder;
+        font-size: 1.1rem;
+        font-weight: 700;
+        font-family: "Barlow Condensed", sans-serif;
+        /* font-family: "Bebas Neue", cursive; */
       }
 
       .bot--username {
-        font-weight: lighter;
-        font-size: 0.7rem;
+        font-weight: 500;
+        font-size: 0.9rem;
+        font-family: "Barlow Condensed", sans-serif;
       }
+
+      .details--txt {
+        margin-block: auto;
+        padding: 1.5rem;
+        font-family: "Bebas Neue", cursive;
+      }
+
+      .gradbox-1 {
+        --grad-clr-1: #ff61d2;
+        --grad-clr-2: #fe9090;
+      }
+
+      .gradbox-2 {
+        --grad-clr-1: #b5d43c;
+        --grad-clr-2: #ecff9f;
+      }
+
+      .gradbox-3 {
+        --grad-clr-1: #f4a261;
+        --grad-clr-2: #ffc52d;
+      }
+
+      .gradbox-4 {
+        --grad-clr-1: #4facfe;
+        --grad-clr-2: #00f2fe;
+      }
+
+      .gradbox-5 {
+        --grad-clr-1: #ff9a9e;
+        --grad-clr-2: #fecfef;
+      }
+
+      .gradbox-6 {
+        --grad-clr-1: #b5d43c;
+        --grad-clr-2: #ecff9f;
+      }
+
+      .gradbox-7 {
+        --grad-clr-1: #0c97fa;
+        --grad-clr-2: #16e1f5;
+      }
+
+      .gradbox-8 {
+        --grad-clr-1: #ff61d2;
+        --grad-clr-2: #fe9090;
+      }
+
+      .gradbox-9 {
+        --grad-clr-1: #b5d43c;
+        --grad-clr-2: #ecff9f;
+      }
+
+      .gradbox-10 {
+        --grad-clr-1: #ff9a9e;
+        --grad-clr-2: #fecfef;
+      }
+
+      .gradbox-11 {
+        --grad-clr-1: #4facfe;
+        --grad-clr-2: #00f2fe;
+      }
+
+      .gradbox-12 {
+        --grad-clr-1: #ff9a9e;
+        --grad-clr-2: #fecfef;
+      }
+
+      .gradbox-13 {
+        --grad-clr-1: #b5d43c;
+        --grad-clr-2: #ecff9f;
+      }
+
+      .gradbox-14 {
+        --grad-clr-1: #4facfe;
+        --grad-clr-2: #00f2fe;
+      }
+
+      /* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Shadows Into Light', cursive; */
 
       .navbar {
         background-color: white;
@@ -295,164 +411,18 @@
           -o-transform: rotate(180deg);
         }
       }
-
-      .main--container {
-        /* min-height: 80vh; */
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 90px;
-        flex-direction: column;
-      }
-
-      .bots--container {
-        padding: 1.5rem;
-        position: relative;
-        margin-top: 1.25rem;
-        border-radius: 10px;
-        border: 5px solid white;
-        width: 95%;
-        max-width: 1200px;
-        -moz-column-gap: 10px;
-        column-gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 10px;
-        list-style: none;
-      }
-
-      /* 
-.boxName--box {
-  position: absolute;
-  left: -1rem;
-  transform: rotate(-90deg) translateY(-1.23rem);
-  -webkit-transform: rotate(-90deg) translateY(-1.23rem);
-  -moz-transform: rotate(-90deg) translateY(-1.23rem);
-  -ms-transform: rotate(-90deg) translateY(-1.23rem);
-  -o-transform: rotate(-90deg) translateY(-1.23rem);
-  background-color: white;
-  border-radius: 10px;
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-} */
-
-      .bot--card {
-        background-color: white;
-
-        box-shadow: 0px 0px 20px rgba(196, 194, 194, 0.366);
-        flex-basis: 280px;
-        min-height: 200px;
-        border-radius: 10px;
-        /* gap: 1rem; */
-        justify-content: end;
-        /* border-left: 10px solid red; */
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-
-        flex-direction: column;
-      }
-
-      .card--division2 {
-        gap: 1rem;
-      }
-
-      .card--division1 {
-        flex-grow: 1;
-        position: relative;
-      }
-
-      .card--division1::after {
-        content: "";
-        position: absolute;
-        top: 00%;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(80, 78, 77, 0.375);
-        opacity: 0.2;
-        border-radius: 10px 10px 0 0;
-        /*box-shadow: 10px 10px 100px red;
-  */
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px 10px 0 0;
-        -ms-border-radius: 10px 10px 0 0;
-        -o-border-radius: 10px 10px 0 0;
-        -webkit-border-radius: 10px 10px 0 0;
-      }
-
-      .bot--icon {
-        position: relative;
-        width: 70px;
-        font-size: 2rem;
-        /* background-color: aquamarine; */
-        /* border-radius: 20px; */
-        /* border-right: 2px solid grey; */
-        aspect-ratio: 1/1;
-        justify-content: center;
-        align-items: center;
-        /* -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px; */
-      }
-
-      .bot--icon::after {
-        content: "";
-        position: absolute;
-        left: 100%;
-        width: 2px;
-        height: 50px;
-        background-color: rgba(80, 78, 77, 0.375);
-        opacity: 0.2;
-        box-shadow: 10px 10px 100px red;
-      }
-
-      .fi {
-        display: inline-block;
-        line-height: 1rem;
-      }
-
-      .bot--img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .bot--details {
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .bot--name {
-        font-weight: bolder;
-      }
-
-      .bot--username {
-        font-weight: lighter;
-        font-size: 0.7rem;
-      }
-
-      .details--txt {
-        margin-block: auto;
-        padding: 1.5rem;
-      }
     </style>
-
   </head>
 
   <body>
     <div class="container">
       <header class="main--header"></header>
       <main class="main--container flex">
-        <ul class="bots--container flex">
+        <ul class="bots--container" id="botBox">
           <!-- <div class="boxName--box">
-              <span class="box--name">Bots</span>
-            </div> -->
-          <li class="bot--card flex">
+            <span class="box--name">Bots</span>
+          </div> -->
+          <a href="https://t.me/filetolinkprov2bot" class="bot--card flex gradbox-1">
             <div class="card--division1 flex">
               <p class="details--txt">
                 I can generate Direct Download Link for any telegram file for downloading or online streaming
@@ -463,9 +433,9 @@
               <div class="bot--details flex"><span class="bot--name">File to Link Bot</span><span
                   class="bot--username">@filetolinkprov2bot</span></div>
             </div>
-          </li>
+          </a>
 
-          <li class="bot--card flex">
+          <a href="https://t.me/renamerprov2_bot" class="bot--card flex gradbox-2">
             <div class="card--division1 flex">
               <p class="details--txt">
                 I am a pro file rename + file to video converter bot with 4gb support
@@ -476,8 +446,8 @@
               <div class="bot--details flex"><span class="bot--name">Files Rename Bot</span><span
                   class="bot--username">@renamerprov2_bot</span></div>
             </div>
-          </li>
-          <li class="bot--card flex">
+          </a>
+          <a href="https://t.me/urlprov2_bot" class="bot--card flex gradbox-3">
             <div class="card--division1 flex">
               <p class="details--txt">
                 I provide movies and web series on your demand
@@ -488,8 +458,8 @@
               <div class="bot--details flex"><span class="bot--name">Movies Bot 1</span><span
                   class="bot--username">@urlprov2_bot</span></div>
             </div>
-          </li>
-          <li class="bot--card flex">
+          </a>
+          <a href="https://t.me/missanju_bot" class="bot--card flex gradbox-4">
             <div class="card--division1 flex">
               <p class="details--txt">
                 I provide movies and web series on your demand
@@ -500,8 +470,8 @@
               <div class="bot--details flex"><span class="bot--name">Movies Bot 2</span><span
                   class="bot--username">@missanju_bot</span></div>
             </div>
-          </li>
-          <li class="bot--card flex">
+          </a>
+          <a href="https://t.me/stringgernate_bot" class="bot--card flex gradbox-5">
             <div class="card--division1 flex">
               <p class="details--txt">
                 You can use me to generate Pyrogram and Telethon String Session
@@ -512,8 +482,8 @@
               <div class="bot--details flex"><span class="bot--name">String Session Bot</span><span
                   class="bot--username">@stringgernate_bot</span></div>
             </div>
-          </li>
-          <li class="bot--card flex">
+          </a>
+          <a href="https://t.me/mdisktofilebot" class="bot--card flex gradbox-6">
             <div class="card--division1 flex">
               <p class="details--txt">
                 I am pro MDisk link to file uploader bot with 4gb support
@@ -524,9 +494,9 @@
               <div class="bot--details flex"><span class="bot--name">MDisk Downloader Bot</span><span
                   class="bot--username">@mdisktofilebot</span></div>
             </div>
-          </li>
+          </a>
 
-          <li class="bot--card flex">
+          <a href="https://t.me/linkshortner1_bot" class="bot--card flex gradbox-7">
             <div class="card--division1 flex">
               <p class="details--txt">
                 I am advanced link shortner bot which can convert your bigger links to short links
@@ -537,8 +507,8 @@
               <div class="bot--details flex"><span class="bot--name">All Link Shortner Bot</span><span
                   class="bot--username">@linkshortner1_bot</span></div>
             </div>
-          </li>
-          <li class="bot--card flex">
+          </a>
+          <a href="https://t.me/bitlyv1_bot" class="bot--card flex gradbox-8">
             <div class="card--division1 flex">
               <p class="details--txt">
                 I can convert your simple links to bitly links
@@ -549,13 +519,13 @@
               <div class="bot--details flex"><span class="bot--name">Bitly Link Generator</span><span
                   class="bot--username">@bitlyv1_bot</span></div>
             </div>
-          </li>
+          </a>
         </ul>
-        <ul class="bots--container flex">
+        <ul class="bots--container" id="groupBox">
           <!-- <div class="boxName--box">
-              <span class="box--name">Groups</span>
-            </div> -->
-          <li class="bot--card flex">
+            <span class="box--name">Groups</span>
+          </div> -->
+          <a href="https://t.me/movierequestgrouppro" class="bot--card flex gradbox-9">
             <div class="card--division1 flex">
               <p class="details--txt">
                 You can request for movies and web series from different platforms
@@ -566,8 +536,8 @@
               <div class="bot--details flex"><span class="bot--name">Movie Request Group</span><span
                   class="bot--username">@movierequestgrouppro</span></div>
             </div>
-          </li>
-          <li class="bot--card flex">
+          </a>
+          <a href="https://t.me/music_247_on" class="bot--card flex gradbox-10">
             <div class="card--division1 flex">
               <p class="details--txt">
                 I recieve all your queries related to bots
@@ -578,13 +548,13 @@
               <div class="bot--details flex"><span class="bot--name">Ultra Bots Support Group</span><span
                   class="bot--username">@music_247_on</span></div>
             </div>
-          </li>
+          </a>
         </ul>
-        <ul class="bots--container flex">
+        <ul class="bots--container" id="channelBox">
           <!-- <div class="boxName--box">
-                              <span class="box--name">Groups</span>
-                            </div> -->
-          <li class="bot--card flex">
+                            <span class="box--name">Groups</span>
+                          </div> -->
+          <a href="https://t.me/MoviesGuard" class="bot--card flex gradbox-11">
             <div class="card--division1 flex">
               <p class="details--txt">
                 You can find all movies and web series here
@@ -595,8 +565,8 @@
               <div class="bot--details flex"><span class="bot--name">Latest Movies and Series</span><span
                   class="bot--username">@MoviesGuard</span></div>
             </div>
-          </li>
-          <li class="bot--card flex">
+          </a>
+          <a href="https://t.me/anumitultrabots" class="bot--card flex gradbox-12">
             <div class="card--division1 flex">
               <p class="details--txt">
                 You can get updates related to all my bots and channels
@@ -607,23 +577,66 @@
               <div class="bot--details flex"><span class="bot--name">UltraBots Updates</span><span
                   class="bot--username">@anumitultrabots</span></div>
             </div>
-          </li>
+          </a>
+        </ul>
+        <ul class="bots--container" id="contactBox">
+
+          <a href="https://t.me/Aaajats" class="bot--card flex gradbox-13">
+            <div class="card--division1 flex">
+              <p class="details--txt">
+                Contact Us on Telegram
+              </p>
+            </div>
+            <div class="card--division2 flex">
+              <div class="bot--icon flex"><i class="fi fi-rr-envelope-open"></i></div>
+              <div class="bot--details flex"><span class="bot--name">Contact Us</span><span
+                  class="bot--username">@Aaajats</span></div>
+            </div>
+          </a>
+          <a href="https://github.com/HelloUltra44" class="bot--card flex gradbox-14">
+            <div class="card--division1 flex">
+              <p class="details--txt">
+                Follow us on github
+              </p>
+            </div>
+            <div class="card--division2 flex">
+              <div class="bot--icon flex"><i class="fi fi-brands-github"></i></div>
+              <div class="bot--details flex"><span class="bot--name">Github</span><span
+                  class="bot--username">@HelloUltra44</span>
+              </div>
+            </div>
+          </a>
         </ul>
       </main>
       <footer class="main--footer"></footer>
       <nav class="navbar flex">
         <nav class="navbar flex">
           <ul class="nav-container flex">
-            <li class="nav--btns flex"><a href="" class="nav--links"> <i class="bi bi-youtube"></i></a></li>
-            <li class="nav--btns flex"><a href="" class="nav--links"> <i class="bi bi-telegram"></i></a></li>
-            <li class="nav--btns flex"><a href="" class="nav--links"> <i class="bi bi-robot"></i></a></li>
-            <li class="nav--btns flex"><a href="" class="nav--links"> <i class="bi bi-people-fill"></i></a></li>
-            <li class="nav--btns flex"><a href="" class="nav--links"> <i class="bi bi-chat-square-heart-fill"></i></a>
+            <li class="nav--btns flex"><a href="https://youtube.com/@anumitultrabots" class="nav--links"> <i
+                  class="bi bi-youtube"></i></a></li>
+            <li class="nav--btns flex"><a href="#channelBox" class="nav--links"> <i class="bi bi-telegram"
+                  onclick="hideAll(2)"></i></a></li>
+            <li class="nav--btns flex"><a href="#botBox" class="nav--links"> <i class="bi bi-robot"
+                  onclick="hideAll(0)"></i></a></li>
+            <li class="nav--btns flex"><a href="#groupBox" class="nav--links"> <i class="bi bi-people-fill"
+                  onclick="hideAll(1)"></i></a>
+            </li>
+            <li class="nav--btns flex"><a href="#contactBox" class="nav--links"> <i class="bi bi-chat-square-heart-fill"
+                  onclick="hideAll(3)"></i></a>
             </li>
           </ul>
         </nav>
       </nav>
     </div>
   </body>
+  <script>
+    const boxAll = document.querySelectorAll(".bots--container");
+    function hideAll(value) {
+      for (let i = 0; i < boxAll.length; i++) {
+        boxAll[i].style.display = "none";
+      }
+      boxAll[value].style.display = "flex";
+    }
+  </script>
 
 </html>
